@@ -1,5 +1,4 @@
-#A 3 position switch
-Author
+#A 3 position switch by
 
     François Vaillant
 
