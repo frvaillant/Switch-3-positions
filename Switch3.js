@@ -1,6 +1,6 @@
 class Switch3 {
 
-    constructor(labels, values, renderZoneId, initval= 0, destinationInputId = null) {
+    constructor(labels, values, renderZoneId, initVal= 0, destinationInputId = null) {
         this.labels         = labels;
         this.values         = values;
         this.renderZone     = document.getElementById(renderZoneId);
@@ -8,8 +8,7 @@ class Switch3 {
         this.cursor         = null;
         this.left           = null;
         this.right          = null;
-        this.width          = null;
-        this.initval        = initval;
+        this.initVal        = initVal;
         this.inputId        = destinationInputId;
         this.leftPosition   = 0;
         this.centerPosition = 1;
@@ -26,6 +25,8 @@ class Switch3 {
         this.left           = barDimensions.left;
         this.right          = barDimensions.right;
         this.center         = this.right - ((this.right - this.left) / 2);
+
+        this.addActiveLabels(this.initVal);
 
         this.bar.addEventListener('click', (e) => {
             this.cursor.classList = ['switch3-cursor'];
@@ -53,7 +54,7 @@ class Switch3 {
     createElement() {
         let html = '<div class="switch3-container" id="switch3-container">\n' +
                     '    <div class="switch3-bar" id="switch3-bar">\n' +
-                    '      <div class="switch3-cursor pos-' + this.initval + ' " id="switch3-cursor"></div>\n' +
+                    '      <div class="switch3-cursor pos-' + this.initVal + ' " id="switch3-cursor"></div>\n' +
                     '    </div>\n' +
                     '    <div class="switch3-label" data-value="'+ this.values[this.leftPosition] +'" id="label0">' + this.labels[this.leftPosition] + '</div>\n' +
                     '    <div class="switch3-label" data-value="'+ this.values[this.centerPosition] +'" id="label1">' + this.labels[this.centerPosition] + '</div>\n' +
@@ -71,6 +72,7 @@ class Switch3 {
         };
         return this;
     }
+
     addActiveLabels(position) {
         for(let i=0; i<this.labels.length; i++) {
             if (this.labels[i].id === 'label'+position) {
