@@ -63,19 +63,22 @@
     font-weight: bold;
     float:left;
     transition:all 0.3s ease-in-out;
-    min-height:28px;
+    min-height:30px;
+    font-weight: normal;
 }
 
 .switch3-label.active {
     color:var(--color-primary);
-    font-size:1.1rem;
+    font-weight: bold;
 }
 .switch3-label:first-of-type {
     text-align:left;
+    padding-left:3px;
 }
 .switch3-label:nth-child(3) {
     text-align:center;
 }
 .switch3-label:last-of-type {
     text-align:right;
+    padding-right:3px;
 }
