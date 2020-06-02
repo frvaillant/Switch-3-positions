@@ -1,6 +1,6 @@
 class Switch3 {
 
-    constructor(labels, values, renderZoneId, initVal= 0, destinationInputId = null, name = 'switch3') {
+    constructor(labels, values, renderZoneId, initVal= 0, name = 'switch3', destinationInputId = null ) {
         this.labels         = labels;
         this.values         = values;
         this.renderZone     = document.getElementById(renderZoneId);

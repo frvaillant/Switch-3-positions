@@ -45,14 +45,14 @@ the generated input is
 ### Create the switch
 
 ```JS
- constructor(labels, values, renderZoneId, initVal= 0, destinationInputId = null, name = 'switch3') 
+ constructor(labels, values, renderZoneId, initVal= 0, name = 'switch3', destinationInputId = null) 
 ```
 - labels is an array with the three labels from left to right
 - values is array with the three values corresponding to the choices from left to right
 - renderZondeId is the id of the div where to render the switch
 - initVal is the value of the switch when it will be first rendered (optionnal, default 0, values : 0, 1 or 2)
-- destinationInputId is the id of your input if you allready have one (Optionnal, default null)
 - name is a string you like to generate ids if you need multiple switches. In that case, the generated input has id name-switch3-val
+- destinationInputId is the id of your input if you allready have one (Optionnal, default null)
 
 ### Example of use
 
