@@ -17,26 +17,26 @@ Author:
 ```
 
 ### Choose your target
-- if you allready have an input to use switch
-Give it an id attribute et add 
+- if you allready have an input in order to use switch,
+give it an id attribute et add :
 
 ```html
 type="hidden"
 ```
 
-The create an empty div with an id
+Then, create an empty div with an id
 
 ```html
-<div id="my-container">
+<div id="my-container"></div>
 ```
 
 - if you don't have an input, just create a div, switch 3 will create an input for your
 
 ```html
-<div id="my-container">
+<div id="my-container"></div>
 ```
 
-the gerated input is 
+the generated input is 
 
 ```html
 <input type="hidden" id="switch3-val" name="switch3-val">
@@ -55,7 +55,10 @@ the gerated input is
 
 ### Example of use
 
-```JS
+```HTML 
+<div id="switcher" style="width:100px;"></div>
+<script>
  const switcher = new Switch3(['non', '?', 'oui'], [2, 0, 1], 'switcher'); 
  switcher.init();
-``
+</script>
+```
