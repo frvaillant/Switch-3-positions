@@ -4,10 +4,6 @@ class Switch3 {
         this.labels         = labels;
         this.values         = values;
         this.renderZone     = document.getElementById(renderZoneId);
-        this.bar            = null;
-        this.cursor         = null;
-        this.left           = null;
-        this.right          = null;
         this.initVal        = initVal;
         this.inputId        = destinationInputId;
         this.leftPosition   = 0;
@@ -22,19 +18,18 @@ class Switch3 {
         this.cursor         = document.getElementById(this.name + '-cursor');
         this.field          = (this.inputId) ? document.getElementById(this.inputId) : document.getElementById(this.name + '-switch3-val');
         this.labels         = document.getElementsByClassName(this.name + '-label');
+        this.getPositions();
+        this.addActiveLabels(this.initVal);
+        this.bar.addEventListener('click', (e) => {
+            this.actions(e)
+        });
+    }
+
+    getPositions() {
         const barDimensions = this.bar.getBoundingClientRect();
         this.left           = barDimensions.left;
         this.right          = barDimensions.right;
         this.center         = this.right - ((this.right - this.left) / 2);
-
-        this.addActiveLabels(this.initVal);
-
-        this.bar.addEventListener('click', (e) => {
-            this.cursor.classList = ['switch3-cursor'];
-            this.cursor.classList.add('pos-' + this.mousePosition(e));
-            this.field.value = this.values[this.mousePosition(e)];
-            this.removeActiveLabels().addActiveLabels(this.mousePosition(e));
-        });
     }
 
     mousePosition(e) {
@@ -50,6 +45,13 @@ class Switch3 {
 
     render() {
         this.renderZone.innerHTML = this.createElement();
+    }
+
+    actions(e) {
+        this.cursor.classList = ['switch3-cursor'];
+        this.cursor.classList.add('pos-' + this.mousePosition(e));
+        this.field.value = this.values[this.mousePosition(e)];
+        this.removeActiveLabels().addActiveLabels(this.mousePosition(e));
     }
 
     createElement() {
