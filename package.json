@@ -1,0 +1,29 @@
+{
+  "name": "triswitch",
+  "version": "1.0.0",
+  "description": "TriSwitch allows you to add a switch with 3 positions instead of 2",
+  "main": "Switch3.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+
+  "style": "css/switch3.css",
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/frvaillant/Switch-3-positions.git"
+  },
+  "keywords": [
+    "switch",
+    "multiple",
+    "form"
+  ],
+  "author": "Francois Vaillant",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/frvaillant/Switch-3-positions/issues"
+  },
+  "homepage": "https://github.com/frvaillant/Switch-3-positions#readme",
+
+
+}

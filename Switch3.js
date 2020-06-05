@@ -1,4 +1,4 @@
-class Switch3 {
+export class Switch3 {
 
     constructor(labels, values, renderZoneId, initVal= 0, name = 'switch3', destinationInputId = null ) {
         this.labels         = labels;
