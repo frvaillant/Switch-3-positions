@@ -9,7 +9,30 @@ Author:
    
 ## How to use
 
-### Include files
+### Use it with npm
+
+```bash
+npm install triswitch
+```
+
+* Create a JS file with (for example)
+
+```JS
+import {Switch3} from "triswitch";
+const switcher = new Switch3(['non', '?', 'oui'], [2, 0, 1], 'switcher', 1);
+switcher.init();
+```
+
+* Don't forget to add CSS
+    * For example in symfony, add in app.scss
+    ```SCSS
+     @import "~triswitch";  
+    ```
+
+* In your view, create a div with switcher id and give it a least 100px width
+  
+
+### Use it simply
 
 ```
 <link rel="stylesheet" href="switch3.css">

@@ -6,9 +6,6 @@
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
-
-  "style": "css/switch3.css",
-
   "repository": {
     "type": "git",
     "url": "git+https://github.com/frvaillant/Switch-3-positions.git"
@@ -24,6 +21,5 @@
     "url": "https://github.com/frvaillant/Switch-3-positions/issues"
   },
   "homepage": "https://github.com/frvaillant/Switch-3-positions#readme",
-
-
+  "style": "css/switch3.css"
 }
